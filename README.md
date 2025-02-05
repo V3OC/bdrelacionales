@@ -1,2 +1,2 @@
-# bdrelacionales
-Base de datos relacionales
+# Víctor Emilio Ojeda Castro
+4AVP
