@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-03-2025 a las 02:18:44
+-- Tiempo de generación: 04-03-2025 a las 02:17:43
 -- Versión del servidor: 10.1.39-MariaDB
 -- Versión de PHP: 7.3.5
 
@@ -119,6 +119,16 @@ CREATE TABLE `favoritos` (
   `canciones_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Volcado de datos para la tabla `favoritos`
+--
+
+INSERT INTO `favoritos` (`id`, `usuario_id`, `canciones_id`) VALUES
+(1, 9, 20),
+(2, 9, 18),
+(3, 9, 9),
+(4, 9, 21);
+
 -- --------------------------------------------------------
 
 --
@@ -164,7 +174,8 @@ INSERT INTO `membresias` (`id`, `descripciones`, `precio`) VALUES
 (1, '1 cuenta Premium\r\n\r\nCancela en cualquier momento\r\n\r\nPago por suscripción o pago único', 129),
 (2, '\r\n1 cuenta Premium verificada\r\n\r\nDescuento para estudiantes que cumplen con los requisitos\r\n\r\nCancel', 69),
 (3, '2 cuentas Premium\r\n\r\nCancela en cualquier momento\r\n\r\nPago por suscripción o pago único', 169),
-(4, 'Hasta 6 cuentas Kids o Premium\r\n\r\nControla el contenido marcado como explícito.\r\n\r\nAcceso a Spotify ', 200);
+(4, 'Hasta 6 cuentas Kids o Premium\r\n\r\nControla el contenido marcado como explícito.\r\n\r\nAcceso a Spotify ', 200),
+(5, 'Membresía FREE Gratis', 0);
 
 -- --------------------------------------------------------
 
@@ -215,7 +226,8 @@ CREATE TABLE `playlist` (
 INSERT INTO `playlist` (`id`, `nombre`, `usuario_id`, `duración`, `totalcanciones`, `descripcion`, `publico`) VALUES
 (1, 'A', 5, '20:22:00', 9, 'Diario', 1),
 (2, 'B', 9, '25:11:00', 11, 'Trabajo', 1),
-(3, 'C', 3, '23:10:00', 15, 'Escuela', 1);
+(3, 'C', 3, '23:10:00', 15, 'Escuela', 1),
+(4, 'Luis', 1, '26:22:00', 32, 'Uso diario', 1);
 
 -- --------------------------------------------------------
 
@@ -235,7 +247,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `correo`, `membresia_id`) VALUES
-(1, 'Luis Ángel Pérez lozano', 'luis.peerez23@cetis107.edu.mx', 3),
+(1, 'Luis Ángel Pérez lozano', 'luis.peerez23@cetis107.edu.mx', 5),
 (2, 'Víctor Emilio Ojeda Castro ', 'victor.ojeda23@cetis107.edu.mx', 1),
 (3, 'Juan Pablo Ochoa Hermosillo', 'juan.ochoa23@cetis107.edu.mx\r\n', 1),
 (4, 'Isaac Moreno Higuera', 'isaac.chavez23@cetis107.edu.mx', 1),
@@ -340,7 +352,7 @@ ALTER TABLE `canciones`
 -- AUTO_INCREMENT de la tabla `favoritos`
 --
 ALTER TABLE `favoritos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `generos`
@@ -352,7 +364,7 @@ ALTER TABLE `generos`
 -- AUTO_INCREMENT de la tabla `membresias`
 --
 ALTER TABLE `membresias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `playliscanciones`
@@ -364,7 +376,7 @@ ALTER TABLE `playliscanciones`
 -- AUTO_INCREMENT de la tabla `playlist`
 --
 ALTER TABLE `playlist`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
