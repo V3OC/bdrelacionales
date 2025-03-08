@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-03-2025 a las 02:17:43
+-- Tiempo de generación: 08-03-2025 a las 01:33:26
 -- Versión del servidor: 10.1.39-MariaDB
 -- Versión de PHP: 7.3.5
 
@@ -33,6 +33,24 @@ CREATE TABLE `artisacanciones` (
   `artista_id` int(11) NOT NULL,
   `canciones_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `artisacanciones`
+--
+
+INSERT INTO `artisacanciones` (`id`, `artista_id`, `canciones_id`) VALUES
+(1, 1, 8),
+(2, 1, 9),
+(3, 1, 10),
+(4, 1, 11),
+(5, 1, 12),
+(6, 1, 13),
+(7, 2, 2),
+(8, 2, 3),
+(9, 2, 4),
+(10, 2, 5),
+(11, 2, 6),
+(12, 2, 7);
 
 -- --------------------------------------------------------
 
@@ -334,7 +352,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `artisacanciones`
 --
 ALTER TABLE `artisacanciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `artistas`
